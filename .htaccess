@@ -1,0 +1,15 @@
+# No muestra el contenido de los directorios:
+Options -Indexes
+
+# Activa la reescritura de la url:
+RewriteEngine On
+
+# Si no son imágenes, y el directorio/archivo no existe, entonces...
+
+RewriteCond %{REQUEST_URI}  !(\.png|\.jpg|\.gif|\.jpeg|\.bmp)$
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# ...redirige a index.php 
+# La [L] del final es para dejar de procesar las reglas de reescritura que siguen.
+RewriteRule ^ index.php [L]
