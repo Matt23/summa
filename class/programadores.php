@@ -44,7 +44,7 @@ class programadores extends empleados {
             $datos['listaempleados'] .= "<tr><td style='padding:10px 25px;'>".$reg['nombre']."</td>";
             $datos['listaempleados'] .= "<td style='padding:10px 25px;'>".$reg['apellido']."</td>";
             $datos['listaempleados'] .= "<td style='padding:10px 25px;'>".$reg['edad']."</td>"; 
-            $datos['listaempleados'] .= "<td style='padding:10px 25px;'>" . ($reg['tipo'] ==1 ? "Programador" : "Diseñador") . " " . $reg['nmb'] . "</td><td style='padding:10px 25px'><a href='".INSTALLPATH."empleados/eliminar/".$reg['id']."'>Eliminar</a></td></tr>";
+            $datos['listaempleados'] .= "<td style='padding:10px 25px;'>" . ($reg['tipo'] ==1 ? "Programador" : "Diseñador") . " " . $reg['nmb'] . "</td><td style='padding:10px 25px'><a href='".INSTALLPATH."programadores/eliminar/".$reg['id']."'>Eliminar</a></td></tr>";
         }
         
         $datos['listaempleados'] .= "</table>";

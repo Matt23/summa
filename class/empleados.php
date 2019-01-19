@@ -136,6 +136,8 @@ class empleados {
 
     function eliminar($get=null,$post=null,$params=null) {
 
+        $this->mysql = new mysql();
+
         $query = "delete from empleados where id = :id ;";
         $vars['id'] = $params[0];
 
